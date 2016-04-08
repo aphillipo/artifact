@@ -28,6 +28,7 @@ defmodule Artifact.Endpoint do
         name
         |> Path.extname
         |> String.downcase
+        |> String.lstrip(?.)
         |> Plug.MIME.type
       end
 
